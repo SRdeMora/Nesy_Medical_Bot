@@ -57,5 +57,6 @@ Es importante tener en cuenta que para utilizar esta API, debes consultar la doc
 2. **Se proporcionan otros enlaces que pueden ser de utilidad**:
    
    -**Página principal de CIMA**: [https://cima.aemps.es/cima/publico/home.html](https://cima.aemps.es/cima/publico/home.html)
+   
    -**Buscador avanzado de medicamentos CIMA**: [https://cima.aemps.es/cima/publico/buscadoravanzado.html](https://cima.aemps.es/cima/publico/buscadoravanzado.html)
 
