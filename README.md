@@ -55,6 +55,7 @@ Es importante tener en cuenta que para utilizar esta API, debes consultar la doc
 1. **Documentación API CIMA REST**:
     https://sede.aemps.gob.es/docs/CIMA-REST-API_1_19.pdf
 2. Se proporcionan otros enlaces que pueden ser de utilidad:
+   
    2.1 **Página principal de CIMA**:
     https://cima.aemps.es/cima/publico/home.html
    2.2 **Buscador avanzado de medicamentos CIMA**:
