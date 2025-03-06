@@ -48,7 +48,7 @@ Antes de ejecutar el bot, asegúrate de tener instalado lo siguiente:
    pip install -r requirements.txt
 3. **Configura las variables de entorno** :
    Crea un archivo .env en la raíz del proyecto y añade tu token de bot de Telegram y las credenciales de Firebase.
-##API CIMA REST##
+##API CIMA REST
     https://cima.aemps.es/cima/rest/
 Es importante tener en cuenta que para utilizar esta API, debes consultar la documentación oficial de la AEMPS para obtener información detallada sobre los diferentes métodos disponibles y cómo utilizarlos correctamente. Puedes encontrar la documentación en el siguiente enlace:
 
