@@ -1,2 +1,51 @@
 # Nesy_Medical_Bot
-Bot de Telegram que permite añadir, modificar, consultar y eliminar citas medicas y medicamentos
+# Nesy: Tu Bot de Gestión de Citas y Medicamentos en Telegram 
+
+Nesy es un bot de Telegram diseñado para ayudarte a gestionar tus citas médicas y medicamentos de manera eficiente. Con Nesy, puedes añadir, consultar, modificar y eliminar citas, así como llevar un registro detallado de tus medicamentos y tratamientos.
+
+## Funcionalidades Principales
+
+- **Gestión de Citas**:
+    - Añade nuevas citas con detalles como descripción, centro médico, especialista, fecha y hora.
+    - Consulta tu lista de citas programadas.
+    - Modifica citas existentes para actualizar cualquier detalle necesario.
+    - Elimina citas que ya no necesitas.
+- **Gestión de Medicamentos**:
+    - Registra tus medicamentos con información detallada como nombre, tratamiento, dosis, y fechas de inicio y fin.
+    - Consulta tu historial de medicamentos.
+    - Modifica la información de medicamentos según sea necesario.
+    - Elimina medicamentos de tu registro.
+- **Información de Medicamentos**:
+    - Obtén información detallada sobre medicamentos directamente desde la base de datos de la Agencia Española de Medicamentos y Productos Sanitarios (AEMPS).
+
+## Cómo Usar Nesy
+
+1. **Inicia la conversación con el bot**:
+   - Busca "NesyBot" en Telegram y envía el mensaje "hola" para iniciar la conversación.
+2. **Registro de usuario**:
+   - Sigue las instrucciones del bot para registrar tu nombre, número de teléfono y correo electrónico.
+3. **Navega por el menú principal**:
+   - Utiliza los botones interactivos para seleccionar entre la gestión de citas, medicamentos o información de medicamentos.
+4. **Interactúa con el bot**:
+   - Sigue las indicaciones del bot para añadir, consultar, modificar o eliminar citas y medicamentos.
+
+## Prerrequisitos
+
+Antes de ejecutar el bot, asegúrate de tener instalado lo siguiente:
+
+- Python 3.6 o superior
+- Librerías de Python: `firebase-admin`, `python-dotenv`, `PyPDF2`, `python-telegram-bot`, `requests`, `beautifulsoup4`
+- Token de bot de Telegram (puedes obtener uno hablando con @BotFather en Telegram)
+- Archivo de credenciales de Firebase (Firebase.json)
+
+## Instalación
+
+1. **Clona el repositorio**:
+   ```bash
+   git clone [https://github.com/theodelrieu?tab=repositories](https://github.com/theodelrieu?tab=repositories)
+   cd [nombre del repositorio]
+2. ** Instala las dependencias**:
+   pip install -r requirements.txt
+3. ** Configura las variables de entorno **
+   Crea un archivo .env en la raíz del proyecto y añade tu token de bot de Telegram y las credenciales de Firebase.
+   
