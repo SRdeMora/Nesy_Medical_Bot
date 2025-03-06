@@ -40,12 +40,12 @@ Antes de ejecutar el bot, asegúrate de tener instalado lo siguiente:
 
 ## Instalación
 
-1. Clona el repositorio:
+1. **Clona el repositorio**:
    ```bash
    git clone [https://github.com/theodelrieu?tab=repositories](https://github.com/theodelrieu?tab=repositories)
    cd [nombre del repositorio]
-2.  Instala las dependencias:
+2.  **Instala las dependencias**:
    pip install -r requirements.txt
-3. Configura las variables de entorno 
+3. **Configura las variables de entorno** 
    Crea un archivo .env en la raíz del proyecto y añade tu token de bot de Telegram y las credenciales de Firebase.
    
