@@ -53,7 +53,7 @@ Antes de ejecutar el bot, asegúrate de tener instalado lo siguiente:
 Es importante tener en cuenta que para utilizar esta API, debes consultar la documentación oficial de la AEMPS para obtener información detallada sobre los diferentes métodos disponibles y cómo utilizarlos correctamente. Puedes encontrar la documentación en el siguiente enlace:
 
 1. **Documentación API CIMA REST**:
-https://sede.aemps.gob.es/docs/CIMA-REST-API_1_19.pdf
+    https://sede.aemps.gob.es/docs/CIMA-REST-API_1_19.pdf
 Se proporcionan otros enlaces que pueden ser de utilidad:
     **Página principal de CIMA**:
     https://cima.aemps.es/cima/publico/home.html
