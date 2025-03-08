@@ -69,7 +69,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 app = Flask(__name__)
 load_dotenv()
 bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
-PORT = int(os.environ.get('PORT', '8443'))
+PORT = int(os.environ.get('PORT', '1000'))
 TOKEN = bot_token
 
 
