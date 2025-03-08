@@ -1083,7 +1083,7 @@ def resumen(resumir, context):
    model_name = "t5-small"
    
    tokenizer = AutoTokenizer.from_pretrained(model_name)
-   summarizer = pipeline("summarization", model=model_name, tokenizer=tokenizer)
+   summarizer = pipeline("summarization", model=model_name, tokenizer=tokenizer,device=1,torch_dtype=torch.float16)
    
    text_chunks = split_text(resumir, max_tokens, tokenizer)
    summaries = summarize_text(text_chunks, summarizer)
