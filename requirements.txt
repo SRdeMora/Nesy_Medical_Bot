@@ -1,6 +1,5 @@
 firebase-admin
 python-dotenv
-pprint
 pypdf2
 urllib3==1.26.16
 python-telegram-bot==13.15
