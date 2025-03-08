@@ -201,7 +201,7 @@ def send_card_menu(update: Update, context: CallbackContext)->int:
 
     reply_markup = InlineKeyboardMarkup(keyboard)
     try:
-        image_path = "enfermera.png"
+        image_path = "images/enfermera.png"
         with open(image_path, 'rb') as image_file:
             usuario = context.user_data['nombre']
             if update.message:
