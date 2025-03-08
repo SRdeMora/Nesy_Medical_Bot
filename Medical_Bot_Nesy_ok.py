@@ -1,25 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
-get_ipython().system('pip install firebase-admin -q')
-get_ipython().system('pip install python-dotenv')
-get_ipython().system('pip install pypdf2')
-get_ipython().system('pip install --upgrade urllib3==1.26.16')
-get_ipython().system('pip install python-telegram-bot==13.15')
-
-
-# In[2]:
-
-
-get_ipython().system('pip install transformers')
-
-
-# In[3]:
-
-
 import firebase_admin
 from firebase_admin import credentials,firestore
 from dotenv import load_dotenv
