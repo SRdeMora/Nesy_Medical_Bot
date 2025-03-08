@@ -255,7 +255,7 @@ def show_citas_menu(query)-> int:
     
     reply_markup = InlineKeyboardMarkup(citas_keyboard)
     try:
-        image_path = "cuaderno.png"
+        image_path = "image/cuaderno.png"
         if not os.path.exists(image_path):
             raise FileNotFoundError(f"La imagen no se encuentra en la ruta especificada: {image_path}")
         with open(image_path, 'rb') as image_file:
@@ -659,7 +659,7 @@ def show_medicamento_menu(query)-> int:
     
     reply_markup = InlineKeyboardMarkup(medicamento_keyboard)
     try:
-        image_path = "medicinas.png"
+        image_path = "image/medicinas.png"
         if not os.path.exists(image_path):
             raise FileNotFoundError(f"La imagen no se encuentra en la ruta especificada: {image_path}")
         with open(image_path, 'rb') as image_file:
