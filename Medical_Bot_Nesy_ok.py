@@ -3,14 +3,15 @@
 
 # In[3]:
 
-
+from flask import Flask, request
+import os
 import firebase_admin
 from firebase_admin import credentials,firestore
 from dotenv import load_dotenv
 import os
 dotenv_path = 'google.env'
 load_dotenv(dotenv_path=dotenv_path)
-
+app = Flask(__name__)
 
 
 
@@ -1309,8 +1310,9 @@ def main() -> None:
     updater.start_polling()
     updater.idle()
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    port = int(os.environ.get('PORT', 10000))
+    app.run(host='0.0.0.0', port=port)
 
 
 # In[ ]:
