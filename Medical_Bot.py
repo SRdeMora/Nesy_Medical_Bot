@@ -1318,7 +1318,7 @@ def main() -> None:
 
     # Inicia el bot
     app.add_url_rule(f'/{TOKEN}', view_func=webhook, methods=['POST'])
-    updater.bot.set_webhook(url='https://<your-app-name>.onrender.com/' + TOKEN)
+    updater.bot.set_webhook(url='https://<medical_bot>.onrender.com/' + TOKEN)
 
     # Inicia la aplicación Flask
     app.run(host='0.0.0.0', port=PORT)
