@@ -34,7 +34,16 @@ Nesy es un bot de Telegram diseñado para ayudarte a gestionar tus citas médica
 Antes de ejecutar el bot, asegúrate de tener instalado lo siguiente:
 
 - Python 3.6 o superior
-- Librerías de Python: `firebase-admin`, `python-dotenv`, `PyPDF2`, `python-telegram-bot`, `requests`, `beautifulsoup4`
+- Librerías de Python: 
+        -firebase-admin==6.0.1
+        -python-dotenv==1.0.0
+        -flask==3.0.3
+        -werkzeug==3.0.3
+        -pypdf2==3.0.1
+        -urllib3==1.26.16
+        -python-telegram-bot==13.15
+        -beautifulsoup4==4.12.2
+
 - Token de bot de Telegram (puedes obtener uno hablando con @BotFather en Telegram)
 - Archivo de credenciales de Firebase (Firebase.json)
 
