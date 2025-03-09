@@ -584,7 +584,7 @@ def sel_eliminar(update: Update, context: CallbackContext):
         else:
             update.message.reply_text("Número de cita no válido.")
             return SEL_ELIMINAR
-        update.message.reply_text("¿Estás seguro de que deseas eliminar esta cita? (s/n): ")
+        update.message.reply_text("¿Estás seguro de que deseas eliminar esta cita? (si/no): ")
     except Exception as e:
         print(f'Error al eliminar cita: {e}')
         return SEL_ELIMINAR 
@@ -1044,64 +1044,6 @@ def confirmar_eliminar_med(update: Update, context: CallbackContext)->int:
 
 # # INFO MEDICAMENTO #
 
-# In[ ]:
-
-
-
-
-
-# In[41]:
-
-
-from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
-
-
-# In[42]:
-
-
-# Función para dividir el texto en fragmentos más pequeños basados en la cantidad máxima de tokens.
-def split_text(text, max_tokens, tokenizer):
-   tokens = tokenizer.encode(text)
-   chunks = [tokens[i:i + max_tokens] for i in range(0, len(tokens), max_tokens)]
-   return [tokenizer.decode(chunk) for chunk in chunks]
-# Función para resumir cada fragmento de texto utilizando un modelo de resumen.
-def summarize_text(text_chunks, summarizer):
-   summaries = []
-   for chunk in text_chunks:
-       summary = summarizer(chunk, max_length=50, min_length=20, do_sample=False)
-       summaries.append(summary[0]['summary_text'])
-   return summaries
-
-# Función para controlar la longitud del texto final asegurándose de que no supere una longitud máxima.
-def controlar_longitud_texto(texto, longitud_maxima=4000):
-   if len(texto) > longitud_maxima:
-       texto = texto[:longitud_maxima]
-   return texto
-# Función para controlar la longitud del texto final asegurándose de que no supere una longitud máxima.
-def resumen(resumir, context):
-   max_tokens = 512
-   model_name = "t5-small"
-   
-   tokenizer = AutoTokenizer.from_pretrained(model_name)
-   summarizer = pipeline("summarization", model=model_name, tokenizer=tokenizer,device=1,torch_dtype=torch.float16)
-   
-   text_chunks = split_text(resumir, max_tokens, tokenizer)
-   summaries = summarize_text(text_chunks, summarizer)
-   
-   final_summary = " ".join(summaries)
-   
-   # Controlar la longitud del texto final
-   final_summary = controlar_longitud_texto(final_summary)
-   
-   context.user_data['final_summary'] = final_summary
-  
-   
-   return final_summary
-
-
-# In[43]:
-
-
 #funcion para extraer pdf del prospecto
 def extraer_pdf(url,context: CallbackContext):
     response = requests.get(url, stream=True)
@@ -1133,11 +1075,8 @@ def extraer_secciones(text:str,update: Update, context: CallbackContext):
         titulo_1= ' '.join(titulo.split()) 
         contenido1 = title_content[1].strip() if len(title_content) > 1 else ""
         # Si el título ya existe y el contenido está vacío, reemplazarlo
-        if titulo in secciones_strip:
-            if contenido:
+        if contenido1:
                 secciones_strip[titulo_1]=contenido1
-        else:
-            secciones_strip[titulo_1]=contenido1
     context.user_data['secciones_strip'] = secciones_strip
     keyboard = [ [titulo] for titulo in secciones_strip.keys()]
     reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True)
@@ -1201,7 +1140,7 @@ def mostrar_secciones(update: Update, context: CallbackContext):
         if len(secciones_strip[query]) >4096:
             update.message.reply_text("Un momento.Estoy buscando la informacion")
             resumir=secciones_strip[query]
-            summa=resumen(resumir,context)
+            summa=resumir[:4000]
             update.message.reply_text(f"{summa}\n\nMás información aquí: {url_doc}")
             return send_card_menu(update, context)
         else:
