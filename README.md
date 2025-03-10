@@ -54,6 +54,7 @@ Nesy es un bot de Telegram diseñado para ayudarte a gestionar tus citas médica
 
 - Token de bot de Telegram (puedes obtener uno hablando con @BotFather en Telegram)
 - Archivo de credenciales de Firebase (Firebase.json)
+- Las imagenes que se encuentran en el archivo "image" 
 >[!IMPORTANT]
 >Es imprescindible la siguiente cofiguración de Firestore Database: Colección= Usuario > Documento=Usuario.
 
