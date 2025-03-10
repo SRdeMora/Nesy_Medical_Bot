@@ -30,6 +30,7 @@ Nesy es un bot de Telegram diseñado para ayudarte a gestionar tus citas médica
    - Sigue las indicaciones del bot para añadir, consultar, modificar o eliminar citas y medicamentos.
 
 ## Prerrequisitos
+[!important]
 
 Antes de ejecutar el bot, asegúrate de tener instalado lo siguiente:
 
