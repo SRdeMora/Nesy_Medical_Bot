@@ -54,17 +54,9 @@ Nesy es un bot de Telegram diseñado para ayudarte a gestionar tus citas médica
 
 - Token de bot de Telegram (puedes obtener uno hablando con @BotFather en Telegram)
 - Archivo de credenciales de Firebase (Firebase.json)
+>[!IMPORTANT]
+>Es imprescindible la siguiente cofiguración de Firestore Database: Colección= Usuario > Documento=Usuario.
 
-## Instalación
-
-1. **Clona el repositorio**:
-   ```bash
-   git clone [https://github.com/theodelrieu?tab=repositories](https://github.com/theodelrieu?tab=repositories)
-   cd [nombre del repositorio]
-2.  **Instala las dependencias**:
-   pip install -r requirements.txt
-3. **Configura las variables de entorno** :
-   Crea un archivo .env en la raíz del proyecto y añade tu token de bot de Telegram y las credenciales de Firebase.
 ## API CIMA REST
     https://cima.aemps.es/cima/rest/
 Es importante tener en cuenta que para utilizar esta API, debes consultar la documentación oficial de la AEMPS para obtener información detallada sobre los diferentes métodos disponibles y cómo utilizarlos correctamente. Puedes encontrar la documentación en el siguiente enlace:
